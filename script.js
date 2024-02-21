@@ -4,8 +4,10 @@ var generateBtn = document.querySelector("#generate");
 var lowercase="abcdefjhijklmnopqrstuvwxyz";
 var uppercase=lowercase.toUpperCase();
 var numeric="0123456789";
+var specialCHaracters="`~!@#$%^&*()_+{}[]:";'<>?,./'
 
 function generatePassword(){
+  var savedPasswords"";
   var passwordSize=prompt("Enter password length between 8 and 128")
   console.log(passwordSize)
 
@@ -15,10 +17,14 @@ if (passwordSize>= 8 && passwordSize<=128) {
     console.log(confirmLowerCase);
     var confirmUpperCase=confirm("Do you want uppercase included in the password?")
     var confirmNumeric=confirm("Do you want numeric values included in the password?")
-    var confirmSpecialCharacter=confirm("Do you want numeric values included in the password?")
+    var confirmSpecialCharacters=confirm("Do you want numeric values included in the password?")
 } else {
   alert("Invalid Entry, Password size must be between 8 and 128.")
 }
+
+
+
+return savedPassword
 
 
 }
