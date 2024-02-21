@@ -1,6 +1,9 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+var lowercase="abcdefjhijklmnopqrstuvwxyz";
+var uppercase=lowercase.toUpperCase();
+var numeric="0123456789";
 
 function generatePassword(){
   var passwordSize=prompt("Enter password length between 8 and 128")
