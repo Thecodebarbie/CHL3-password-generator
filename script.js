@@ -18,9 +18,21 @@ function generatePassword(){
     var confirmNumeric=confirm("Do you want numeric values icluded in the password")
     var confirmSpecialCharacter=confirm("Do you want special characters icluded in the password")
 
-    if
+    for(var i=0; i < passwordSize; i++){
+
+    
+
+    if(confirmLowerCase){
+      var randomIndex= Math.floor ( Math.random()* lowercase.length )
+      console.log(randomIndex)
+      
+      savedPassword= savedPassword+lowercase[randomIndex]
+
+    }
 
 
+  }
+  
   }
   else{
     alert("Invalid entry, Password length must be between 8 and 128")
