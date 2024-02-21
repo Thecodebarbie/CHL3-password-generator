@@ -45,7 +45,12 @@ function generatePassword(){
       savedPassword= savedPassword+numeric[randomIndex]
     }
 
-    
+    if(specialCharacter && savedPassword.length < passwordSize){
+      var randomIndex= Math.floor ( Math.random()* specialCharacter.length )
+      console.log(randomIndex)
+      
+      savedPassword= savedPassword+specialCharacter[randomIndex]
+    }
   }
 
   }
