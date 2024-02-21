@@ -22,7 +22,7 @@ function generatePassword(){
 
     
 
-    if(confirmLowerCase){
+    if(confirmLowerCase && savedPassword.length < passwordSize){
       var randomIndex= Math.floor ( Math.random()* lowercase.length )
       console.log(randomIndex)
       
@@ -30,9 +30,24 @@ function generatePassword(){
 
     }
 
+    if(confirmUpperCase && savedPassword.length < passwordSize){
+      var randomIndex= Math.floor ( Math.random()* uppercase.length )
+      console.log(randomIndex)
+      
+      savedPassword= savedPassword+uppercase[randomIndex]
 
+    }
+
+    if(numeric && savedPassword.length < passwordSize){
+      var randomIndex= Math.floor ( Math.random()* numeric.length )
+      console.log(randomIndex)
+      
+      savedPassword= savedPassword+numeric[randomIndex]
+    }
+
+    
   }
-  
+
   }
   else{
     alert("Invalid entry, Password length must be between 8 and 128")
