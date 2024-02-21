@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+
 function generatePassword(){
   var passwordSize=prompt("Enter password length between 8 and 128")
   console.log(passwordSize)
@@ -8,10 +9,10 @@ function generatePassword(){
 //Conditional Statement
 if (passwordSize>= 8 && passwordSize<=128) {
     var confirmLowerCase=confirm("Do you want lowercase included in the password?")
-    console.log(confirmUpperCase);
-    var passwordSize=prompt("Enter password length between 8 and 128")
-    console.log(passwordSize)
-  
+    console.log(confirmLowerCase);
+    var confirmUpperCase=confirm("Do you want uppercase included in the password?")
+    var confirmNumeric=confirm("Do you want numeric values included in the password?")
+    var confirmSpecialCharacter=confirm("Do you want numeric values included in the password?")
 } else {
   alert("Invalid Entry, Password size must be between 8 and 128.")
 }
